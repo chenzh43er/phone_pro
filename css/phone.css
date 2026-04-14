@@ -1,0 +1,817 @@
+.contents {
+	min-height: 80vh !important;
+}
+.banner-l {
+	background-color: rgb(5 30 52 / 85%);
+}
+.index-banner {
+	background-image: url(../Images/phone/Phone-banner.webp);
+}
+.most-btn-item {
+	width: 220px;
+	height: 56px;
+	background-color: #1174eb;
+	border-radius: 28px;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 56px;
+	color: #fff;
+	border: none;
+	/* padding: 0 36px; */
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: uppercase;
+}
+.most-btn-item .right-arrow {
+	width: 14px;
+	height: 12px;
+	fill: #fff;
+	margin-left: 15px;
+}
+.most-btn-item:active {
+	background-color: #0065e1;
+}
+.common-tit {
+	color: #333;
+}
+.common-subtit {
+	font-size: 18px;
+	line-height: 24px;
+	color: #333;
+	opacity: 0.5;
+}
+.detail-right .common-tit {
+	margin-top: 48px;
+}
+.view-all {
+	width: 367px;
+	height: 56px;
+	border-radius: 28px;
+	border: solid 2px rgb(17 116 235 / 20%);
+	padding: 0 35px;
+	box-sizing: border-box;
+	font-weight: 500;
+	line-height: 52px;
+	color: rgb(17 116 235 / 75%);
+	margin-top: 24px;
+}
+.view-all:hover {
+	color: #1174eb;
+	border-color: #1174eb;
+}
+.index-bg {
+	background-color: #f8f8f8;
+}
+.about-us h5 {
+	color: #333;
+}
+.about-us div {
+	color: #666;
+}
+.ab-indexitm-banner {
+	background-image: url(../Images/phone/phone-desktop-banner.webp);
+	background-color: #f7f7f7;
+}
+.ab-indexitm-banner .indexitm-banner-tit {
+	color: #333;
+}
+.ab-indexitm-banner .indexitm-banner-desc {
+	color: #8c9094;
+}
+.step_box:hover {
+	box-shadow: none;
+}
+.icon_step {
+	height: 48px;
+	flex: 0 0 48px;
+}
+.step_box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.select-text .h4 {
+	height: 40px;
+}
+.select-after .icon_step {
+	opacity: 1;
+}
+.statelists li {
+	width: 100%;
+}
+.statelists li:last-child {
+	margin-bottom: 0;
+}
+.statelists .statelists-imgli .statelists-link {
+	display: flex;
+	padding: 24px;
+	box-sizing: border-box;
+	align-items: center;
+}
+.statelists-imgli .most-img {
+	width: 130px;
+	height: auto;
+}
+.statelists-right {
+	margin: 0 36px 0 28px;
+}
+.title {
+	text-transform: capitalize;
+}
+.phonetitle {
+	font-family: GoogleSans;
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 24px;
+	color: #142144;
+}
+.phone-info {
+	font-family: GoogleSans;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 18px;
+	color: #142144;
+	opacity: 0.75;
+	margin: 10px 0;
+}
+.phone-view .phone {
+	width: 16px;
+	height: 16px;
+	fill: #0065e1;
+}
+.phone-view {
+	font-family: GoogleSans;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1;
+	color: #0065e1;
+}
+.phone-view span {
+	vertical-align: bottom;
+}
+.most-phone-btn {
+	width: 120px;
+	height: 40px;
+	flex: 0 0 120px;
+	background-color: #0065e1;
+	border-radius: 4px;
+	font-family: GoogleSans;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 40px;
+	color: #fff;
+	text-align: center;
+	align-self: flex-end;
+}
+.like {
+	position: absolute;
+	right: 16px;
+	top: 16px;
+}
+.phone-sign {
+	display: inline-block;
+	height: 26px;
+	background-color: rgb(162 50 163 / 8%);
+	border-radius: 13px;
+	padding: 0 16px;
+	box-sizing: border-box;
+	font-family: GoogleSans;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 26px;
+	color: #a232a3;
+	margin-left: 10px;
+	vertical-align: bottom;
+}
+.free {
+	background-color: rgb(13 155 143 / 8%);
+	color: #0d9b8f;
+}
+.see-qualification {
+	width: 100%;
+	height: 138px;
+	border-radius: 8px;
+	background-color: #ecf3fe;
+	position: relative;
+	padding: 30px;
+	box-sizing: border-box;
+	margin-bottom: 24px;
+}
+.sq-img {
+	width: 187px;
+	position: absolute;
+	top: 50%;
+	right: 45px;
+	transform: translateY(-50%);
+}
+.sq-tl {
+	font-family: GoogleSans;
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 1;
+	color: #142144;
+	margin-bottom: 18px;
+}
+.sq-btn {
+	width: 140px;
+	height: 40px;
+	background-color: #0065e1;
+	border-radius: 4px;
+	font-family: GoogleSans;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 40px;
+	color: #fff;
+	text-align: center;
+}
+.sq-btn:hover {
+	background-color: #035cc9;
+}
+.icon-detail {
+	width: 20px;
+	height: 20px;
+	fill: #3c69e0;
+	margin-right: 12px;
+	fill: #142144 !important;
+}
+.phone-desc {
+	font-family: GoogleSans;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 22px;
+	color: #142144;
+	margin-top: 10px;
+}
+.phone-card-box {
+	margin-right: -16px;
+	font-size: 0;
+	margin: 24px 0 8px;
+}
+.phone-card-item {
+	display: inline-block;
+	width: 50%;
+	padding-right: 16px;
+	box-sizing: border-box;
+	margin-bottom: 16px;
+}
+.phone-card {
+	border-radius: 8px;
+	overflow: hidden;
+}
+.phone-card-tit {
+	height: 56px;
+	background: url(../Images/phone/android.svg) no-repeat;
+	background-color: #2a3c6a;
+	font-family: GoogleSans;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 56px;
+	letter-spacing: 0px;
+	color: #fff;
+	padding: 0 24px;
+	box-sizing: border-box;
+	background-size: 60px 72px;
+	background-position: top 3px right 16px;
+}
+.phone-card-cont {
+	padding: 24px 24px 14px;
+	box-sizing: border-box;
+	background-color: #f7f9fa;
+}
+.phone-card-cont .info_span {
+	vertical-align: top;
+	font-family: GoogleSans;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 22px;
+	color: #142144;
+}
+.phone-card-cont li {
+	margin-bottom: 10px;
+}
+.dt-provided .s-tl {
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 22px;
+	color: #142144;
+}
+.dt-provided .essay {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+}
+.dt-provided .essay h5 {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 18px;
+}
+.dt-provided table {
+	border: none;
+	margin-top: 24px;
+	border-bottom: none;
+	border-radius: 8px;
+	overflow: hidden;
+}
+td,
+th {
+	border: none;
+	border-bottom: 1px solid #e3e6e7;
+	text-align: center;
+	color: #142144;
+}
+tr {
+	background-color: #f7f9fa;
+}
+tr:nth-child(odd) {
+	background-color: #f7f9fa;
+}
+tr:first-child {
+	height: 64px;
+	background-color: #2a3c6a;
+}
+tr:first-child th {
+	color: #fff;
+}
+tr:last-child {
+	background-color: #fff;
+}
+tr:last-child td {
+	font-size: 14px;
+	opacity: 0.5;
+	border-bottom: none;
+}
+tr:nth-last-child(2) td:first-child {
+	border-bottom-left-radius: 8px;
+}
+tr:nth-last-child(2) td:last-child {
+	border-bottom-right-radius: 8px;
+}
+tr:nth-last-child(2) td {
+	border-bottom: none;
+}
+tr:nth-child(2) {
+	background-color: #e7eaee;
+}
+.ffcp {
+	width: 100%;
+	height: 88px;
+	box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.12);
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	padding: 0 30px 0 20px;
+	box-sizing: border-box;
+	background-image: url(../Images/phone/ffcp-desktop.webp);
+	background-color: #0f51b5;
+	background-size: 100% 100%;
+	background-position: center;
+	transition: background-size 0.2s ease-in-out;
+	overflow: hidden;
+}
+.ffcp:hover {
+	background-size: 110% 110%;
+}
+.icon-sale {
+	width: 36px;
+	height: 36px;
+	fill: #fff;
+}
+.ffcp-tit {
+	font-family: GoogleSans;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 88px;
+	color: #fff;
+	text-shadow: 0px 0px 12px rgba(0, 0, 0, 0.16);
+	flex: 1;
+}
+.icon-next {
+	width: 11px;
+	height: 17px;
+	fill: #fff;
+}
+.related-tit {
+	font-size: 40px;
+	line-height: 40px;
+	color: #fff;
+	text-shadow: 0px 0px 23px rgba(0, 0, 0, 0.5);
+}
+.related-btn {
+	width: 180px;
+	height: 48px;
+	background-color: #1174eb;
+	box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.12);
+	border-radius: 24px;
+	text-transform: uppercase;
+	color: #fff;
+	line-height: 48px;
+	font-weight: 700;
+}
+.related-btn:hover {
+	background-color: #0065e1;
+}
+.related-box1 {
+	background-image: url(../Images/phone/PhoneProviders.webp);
+}
+.related-box2 {
+	background-image: url(../Images/phone/StateQualifications.webp);
+}
+.logo img {
+	height: 35px;
+	margin-top: 15px;
+}
+.ft-logo img {
+	height: 62px;
+	margin-bottom: 42px;
+}
+.query-state {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.query-page {
+	width: 250px;
+	margin: 20px auto 30px;
+}
+/* .query-page a{
+    height: 50px;
+}
+.next_p{
+    display: inline-block;
+    height: 0px;
+    color: #fff;
+    width: 100%;
+} */
+.query-page .next_p {
+	display: inline-block;
+	width: 100%;
+	height: 50px;
+	border-radius: 3px;
+	font-style: normal;
+	font: 700 20px/50px "GoogleSans";
+	cursor: pointer;
+	-webkit-font-smoothing: antialiased;
+	background-color: #1173eb;
+	color: #fff;
+}
+.query-page .next_p:active {
+	background-color: #3689ee;
+}
+.second-query {
+	width: 100%;
+	margin-top: 30px;
+}
+.query-tit {
+	font-family: GoogleSans;
+	font-weight: 700;
+	font-size: 24px;
+	color: #3c69e0;
+	margin-bottom: 15px;
+	text-align: center;
+}
+.second-row {
+	margin-bottom: 10px;
+	display: flex;
+	align-items: start;
+}
+.second-row input[type="checkbox"] {
+	opacity: 1;
+	outline: none;
+	width: 25px;
+	height: 25px;
+	border: none;
+	vertical-align: bottom;
+	display: inline-block;
+	text-align: center;
+	line-height: 30px;
+	position: relative;
+	margin-right: 10px;
+	border: 1px solid #333;
+	vertical-align: middle;
+	right: 0;
+	top: 0;
+	flex: 0 0 25px;
+	margin-top: 0;
+}
+.second-row input[type="checkbox"]::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #333;
+}
+.second-row input[type="checkbox"]:checked::before {
+	content: "✔️";
+	color: #2c75d6;
+	font-size: 20px;
+	line-height: 25px;
+	font-weight: 700;
+}
+.second-row label {
+	font-size: 16px;
+	line-height: 28px;
+	vertical-align: middle;
+}
+.if-empty {
+	display: none;
+	text-align: center;
+	color: red;
+	margin: 10px 0;
+}
+.select-state .query-select {
+	border-radius: 3px;
+}
+.query-select-text .h4 {
+	height: auto;
+}
+
+@media screen and (max-width: 768px) {
+	.most-btn-item {
+		margin: 0 auto;
+		width: 175px;
+		height: 48px;
+		font-size: 16px;
+		line-height: 48px;
+		padding: 0 20px;
+	}
+	.most-btn-item .right-arrow {
+		width: 12px;
+	}
+	.ft-logo img {
+		height: 36px;
+		margin-bottom: 22px;
+	}
+	.query-tit {
+		font-size: 22px;
+		font-weight: 700;
+	}
+	.second-row label {
+		font-size: 14px;
+		line-height: 22px;
+	}
+	.second-row input[type="checkbox"] {
+		width: 18px;
+		height: 18px;
+		line-height: 15px;
+		flex: 0 0 18px;
+	}
+	.second-row input[type="checkbox"]:checked::before {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+@media screen and (max-width: 600px) {
+	.logo img {
+		height: 28px;
+		margin-top: 11px;
+	}
+	.index-banner {
+		width: 100%;
+		transform: none;
+		background-image: url(../Images/phone/Phone-banner-Mobile.webp);
+	}
+	.banner-l {
+		background-color: transparent;
+	}
+	.ab-indexitm-banner .indexitm-banner-tit {
+		color: #fff;
+		margin-bottom: 14px;
+		margin-top: 24px;
+	}
+	.ab-indexitm-banner .indexitm-banner-desc {
+		color: #fff;
+		margin-bottom: 28px;
+	}
+	.ab-indexitm-banner {
+		background-image: url(../Images/phone/phone-mobile-banner.webp);
+	}
+	.imgli-box {
+		margin-top: 26px;
+		margin-bottom: 12px;
+	}
+	.statelists .statelists-imgli .statelists-link {
+		flex-direction: column;
+		align-self: center;
+		padding: 16px;
+	}
+	.statelists-right {
+		margin: 0;
+		text-align: center;
+	}
+	.phone-view {
+		width: 40px;
+		height: 40px;
+		line-height: 38px;
+		text-align: center;
+		background-color: rgb(0 101 225 / 8%);
+		border-radius: 4px;
+	}
+	.phone-view .phone {
+		margin: 0;
+	}
+	.phone-view span {
+		display: none;
+	}
+	.most-phone-btn {
+		align-self: flex-end;
+		flex: 1;
+		position: absolute;
+		bottom: 16px;
+		width: calc(100% - 80px);
+	}
+	.phone-sign {
+		position: absolute;
+		top: 16px;
+		left: 16px;
+		margin: 0;
+	}
+	.like {
+		right: 8px;
+		top: 8px;
+	}
+	.phone-card-item {
+		width: 100%;
+	}
+	.ffcp {
+		width: 100%;
+		height: 88px;
+		box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.12);
+		border-radius: 8px;
+		display: flex;
+		align-items: center;
+		padding: 0 30px 0 20px;
+		box-sizing: border-box;
+		background-image: url(../Images/phone/ffcp-mobile.webp);
+		background-color: #0f51b5;
+	}
+	.see-qualification {
+		height: auto;
+		padding: 20px;
+	}
+	.sq-img {
+		right: 10px;
+		width: 156px;
+	}
+	.view-all {
+		width: 300px;
+		height: 48px;
+		line-height: 44px;
+	}
+	.banner-cate {
+		display: none;
+	}
+	.banner-l {
+		padding: 46px 32px;
+	}
+	.query-page {
+		width: 100%;
+		margin: 20px auto;
+	}
+	.query-state,
+	.second-query {
+		margin-top: 20px;
+	}
+}
+@media screen and (max-width: 360px) {
+	.ffcp-tit {
+		font-size: 16px;
+	}
+	.sq-img {
+		right: 0;
+		width: 110px;
+	}
+	.most-btn-item {
+		height: 42px;
+		line-height: 42px;
+		font-size: 15px;
+	}
+}
+
+/* Christmas */
+@font-face {
+	font-display: swap;
+	font-family: Gilroy;
+	src: url(../Fonts/Gilroy_Bold.woff2) format("woff2");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-display: swap;
+	font-family: Gilroy;
+	src: url(../Fonts/Gilroy_Medium.woff2) format("woff2");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-display: swap;
+	font-family: Gilroy;
+	src: url(../Fonts/Gilroy_Regular.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+.christmas-banner {
+	height: 450px;
+	background-image: url(../Images/phone/Christmas/ULCH-phone-des.avif);
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.banner-content {
+	display: flex;
+	width: calc(100% - 64px);
+	max-width: 1100px;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 32px;
+}
+.banner-content-text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 16px;
+}
+.banner-content-feature {
+	color: #fff;
+	font-family: Gilroy;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 24px;
+}
+.banner-content-title {
+	overflow: hidden;
+	color: #fff;
+	font-family: Gilroy;
+	font-size: 64px;
+	font-weight: 700;
+	line-height: 68px;
+}
+.banner-content-subtitle {
+	overflow: hidden;
+	color: #fff;
+	font-family: Gilroy;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 28px;
+}
+.find-btn {
+	display: flex;
+	padding: 16px 32px;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+	border-radius: 999px;
+	background: #0e74eb;
+	color: #fff;
+	font-family: Gilroy;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 24px;
+	text-transform: uppercase;
+	transition: 0.2s all ease-in-out;
+}
+.find-btn:hover {
+	filter: brightness(1.15);
+}
+
+@media screen and (max-width: 600px) {
+	.christmas-banner {
+		height: 350px;
+		justify-content: flex-start;
+		gap: 24px;
+		background-color: rgba(51, 51, 51, 0.2);
+		background-image: url(../Images/phone/Christmas/ULCH-phone-mob.avif);
+		background-blend-mode: multiply;
+	}
+	.banner-content {
+		width: 80%;
+		margin-left: 20px;
+		gap: 12px;
+	}
+	.banner-content-feature {
+		display: none;
+	}
+	.banner-content-title {
+		font-size: 32px;
+		line-height: 36px;
+	}
+	.banner-content-subtitle {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	.find-btn {
+		padding: 12px 20px;
+		font-size: 16px;
+		line-height: 20px;
+		gap: 6px;
+	}
+	#br {
+		display: none;
+	}
+}

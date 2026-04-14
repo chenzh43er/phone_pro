@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>About Us | Phone UsLowCostHousing</title>
+    <link type="text/css" rel="stylesheet" href="./css/phone-style.css?v=1.20">
+    <link type="text/css" rel="stylesheet" href="./css/phone-office.css?v=1.20">
+    <link type="text/css" rel="stylesheet" href="./css/phone.css?v=1.20">
+
+<body>
+
+<header id = "header">
+</header>
+
+<div class="login" id="login">
+    <div class="shade" id="loginbox"></div>
+    <div class="log_box">
+        <button id="logclose">
+            <svg class="icon-close">
+                <use xlink:href="#icon-close"></use>
+            </svg>
+        </button>
+        <div class="log-content">
+            <img class="" alt="Login" src="/Public/Images/housing/log-in.webp">
+            <h2>Log in to save your favorite Housing List</h2>
+            <p>Don’t miss the apartments you like!</p>
+            <div id="loginButton"></div>
+            <div class="signlater">Sign in later</div>
+        </div>
+    </div>
+</div>
+
+<div class="nav-modal">
+    <div class="nav-modal-wrap">
+        <div class="nav-wrap">
+            <form action="/provider/state/" class="select-loc-wrap" method="post">
+                <svg class="icon-search" width="16" height="16" style="fill: rgb(29 47 94 / 30%)">
+                    <use xlink:href="#icon-search"></use>
+                </svg>
+                <select class="select-location" onchange="window.location=this.value;">
+                    <option value="" class="select-loc-item">Free Phones</option>
+                    <option value="/provider/state/al/" class="select-loc-item">Alabama</option><option value="/provider/state/ak/" class="select-loc-item">Alaska</option><option value="/provider/state/az/" class="select-loc-item">Arizona</option><option value="/provider/state/ar/" class="select-loc-item">Arkansas</option><option value="/provider/state/ca/" class="select-loc-item">California</option><option value="/provider/state/co/" class="select-loc-item">Colorado</option><option value="/provider/state/ct/" class="select-loc-item">Connecticut</option><option value="/provider/state/de/" class="select-loc-item">Delaware</option><option value="/provider/state/fl/" class="select-loc-item">Florida</option><option value="/provider/state/ga/" class="select-loc-item">Georgia</option><option value="/provider/state/hi/" class="select-loc-item">Hawaii</option><option value="/provider/state/id/" class="select-loc-item">Idaho</option><option value="/provider/state/in/" class="select-loc-item">Indiana</option><option value="/provider/state/ia/" class="select-loc-item">Iowa</option><option value="/provider/state/ks/" class="select-loc-item">Kansas</option><option value="/provider/state/ky/" class="select-loc-item">Kentucky</option><option value="/provider/state/il/" class="select-loc-item">lllinois</option><option value="/provider/state/la/" class="select-loc-item">Louisiana</option><option value="/provider/state/me/" class="select-loc-item">Maine</option><option value="/provider/state/md/" class="select-loc-item">Maryland</option><option value="/provider/state/ma/" class="select-loc-item">Massachusetts</option><option value="/provider/state/mi/" class="select-loc-item">Michigan</option><option value="/provider/state/mn/" class="select-loc-item">Minnesota</option><option value="/provider/state/ms/" class="select-loc-item">Mississippi</option><option value="/provider/state/mo/" class="select-loc-item">Missouri</option><option value="/provider/state/ne/" class="select-loc-item">Nebraska</option><option value="/provider/state/nv/" class="select-loc-item">Nevada</option><option value="/provider/state/nh/" class="select-loc-item">New Hampshire</option><option value="/provider/state/nj/" class="select-loc-item">New Jersey</option><option value="/provider/state/nm/" class="select-loc-item">New Mexico</option><option value="/provider/state/ny/" class="select-loc-item">New York</option><option value="/provider/state/nc/" class="select-loc-item">North Carolina</option><option value="/provider/state/nd/" class="select-loc-item">North Dakota</option><option value="/provider/state/oh/" class="select-loc-item">Ohio</option><option value="/provider/state/ok/" class="select-loc-item">Oklahoma</option><option value="/provider/state/or/" class="select-loc-item">Oregon</option><option value="/provider/state/pa/" class="select-loc-item">Pennsylvania</option><option value="/provider/state/pr/" class="select-loc-item">Puerto Rico</option><option value="/provider/state/ri/" class="select-loc-item">Rhode Island</option><option value="/provider/state/sc/" class="select-loc-item">South Carolina</option><option value="/provider/state/sd/" class="select-loc-item">South Dakota</option><option value="/provider/state/tn/" class="select-loc-item">Tennessee</option><option value="/provider/state/tx/" class="select-loc-item">Texas</option><option value="/provider/state/ut/" class="select-loc-item">Utah</option><option value="/provider/state/vt/" class="select-loc-item">Vermont</option><option value="/provider/state/va/" class="select-loc-item">Virginia</option><option value="/provider/state/wa/" class="select-loc-item">Washington</option><option value="/provider/state/dc/" class="select-loc-item">Washington, D.C.</option><option value="/provider/state/wv/" class="select-loc-item">West Virginia</option><option value="/provider/state/wi/" class="select-loc-item">Wisconsin</option><option value="/provider/state/wy/" class="select-loc-item">Wyoming</option>            </select>
+                <button class="select-btn">
+                    Search
+                </button>
+            </form>
+        </div>
+    </div>
+    <div class="nav-cover"></div>
+</div>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <defs>
+        <symbol id="icon-free" viewBox="0 0 32 32" fill="none">
+            <path d="M21.3337 14.6667C21.7114 14.6667 22.0281 14.5389 22.2837 14.2834C22.5392 14.0278 22.667 13.7111 22.667 13.3334C22.667 12.9556 22.5392 12.6389 22.2837 12.3834C22.0281 12.1278 21.7114 12 21.3337 12C20.9559 12 20.6392 12.1278 20.3837 12.3834C20.1281 12.6389 20.0003 12.9556 20.0003 13.3334C20.0003 13.7111 20.1281 14.0278 20.3837 14.2834C20.6392 14.5389 20.9559 14.6667 21.3337 14.6667ZM10.667 12H17.3337V9.33335H10.667V12ZM6.00033 28C5.24477 25.4667 4.50033 22.9389 3.76699 20.4167C3.03366 17.8945 2.66699 15.3111 2.66699 12.6667C2.66699 10.6222 3.3781 8.88891 4.80033 7.46669C6.22255 6.04446 7.95588 5.33335 10.0003 5.33335H16.667C17.3114 4.48891 18.0948 3.83335 19.017 3.36669C19.9392 2.90002 20.9337 2.66669 22.0003 2.66669C22.5559 2.66669 23.0281 2.86113 23.417 3.25002C23.8059 3.63891 24.0003 4.11113 24.0003 4.66669C24.0003 4.80002 23.9837 4.93335 23.9503 5.06669C23.917 5.20002 23.8781 5.32224 23.8337 5.43335C23.7448 5.6778 23.6614 5.9278 23.5837 6.18335C23.5059 6.43891 23.4448 6.70002 23.4003 6.96669L26.4337 10H29.3337V19.3L25.567 20.5334L23.3337 28H16.0003V25.3334H13.3337V28H6.00033ZM8.00033 25.3334H10.667V22.6667H18.667V25.3334H21.3337L23.4003 18.4667L26.667 17.3667V12.6667H25.3337L20.667 8.00002C20.667 7.55558 20.6948 7.1278 20.7503 6.71669C20.8059 6.30558 20.8892 5.88891 21.0003 5.46669C20.3559 5.64446 19.7892 5.95002 19.3003 6.38335C18.8114 6.81669 18.4559 7.35558 18.2337 8.00002H10.0003C8.71144 8.00002 7.61144 8.45558 6.70033 9.36669C5.78921 10.2778 5.33366 11.3778 5.33366 12.6667C5.33366 14.8445 5.63366 16.9722 6.23366 19.05C6.83366 21.1278 7.42255 23.2222 8.00033 25.3334Z" fill="#333333"></path>
+        </symbol>
+        <symbol id="icon-easy" viewBox="0 0 32 32" fill="none">
+            <path d="M10.3997 6.96665L9.06634 2.96665L10.933 2.36665L12.2663 6.33331L10.3997 6.96665ZM14.9997 5.33331V1.33331H16.9997V5.33331H14.9997ZM21.5997 6.96665L19.733 6.33331L21.0663 2.36665L22.933 2.99998L21.5997 6.96665ZM2.86634 30.6666L2.46634 28.0333L9.49967 26.9666C9.74412 26.9222 9.96079 26.8166 10.1497 26.65C10.3386 26.4833 10.4775 26.2778 10.5663 26.0333L11.6997 22.5C11.8108 22.1889 11.8108 21.8889 11.6997 21.6C11.5886 21.3111 11.3886 21.0889 11.0997 20.9333L9.99967 24.4L7.46634 23.6L10.3997 14.3333C10.4441 14.2 10.4663 14.0555 10.4663 13.9C10.4663 13.7444 10.4441 13.6 10.3997 13.4666L5.93301 21.8666C5.57745 22.5111 5.08301 23.0278 4.44967 23.4166C3.81634 23.8055 3.13301 24 2.39967 24H1.33301V21.3333H2.39967C2.64412 21.3333 2.8719 21.2722 3.08301 21.15C3.29412 21.0278 3.45523 20.8555 3.56634 20.6333L9.46634 9.49998L11.133 10.4333C11.9552 10.9 12.5386 11.5722 12.883 12.45C13.2275 13.3278 13.2552 14.2222 12.9663 15.1333L11.933 18.4C12.9108 18.7778 13.6163 19.4444 14.0497 20.4C14.483 21.3555 14.5441 22.3333 14.233 23.3333L13.0997 26.8666C12.8552 27.5778 12.4497 28.1833 11.883 28.6833C11.3163 29.1833 10.6552 29.4889 9.89968 29.6L2.86634 30.6666ZM29.133 30.6666L22.0997 29.6C21.3441 29.4889 20.683 29.1833 20.1163 28.6833C19.5497 28.1833 19.1441 27.5778 18.8997 26.8666L17.7663 23.3333C17.4552 22.3333 17.5163 21.3555 17.9497 20.4C18.383 19.4444 19.0886 18.7778 20.0663 18.4L19.033 15.1333C18.7441 14.2222 18.7719 13.3278 19.1163 12.45C19.4608 11.5722 20.0441 10.9 20.8663 10.4333L22.533 9.49998L28.433 20.6333C28.5441 20.8555 28.7052 21.0278 28.9163 21.15C29.1275 21.2722 29.3552 21.3333 29.5997 21.3333H30.6663V24H29.5997C28.8663 24 28.183 23.8055 27.5497 23.4166C26.9163 23.0278 26.4219 22.5111 26.0663 21.8666L21.5997 13.4666C21.5552 13.6 21.533 13.7444 21.533 13.9C21.533 14.0555 21.5552 14.2 21.5997 14.3333L24.533 23.6L21.9997 24.4L20.8997 20.9333C20.6108 21.0889 20.4108 21.3111 20.2997 21.6C20.1886 21.8889 20.1886 22.1889 20.2997 22.5L21.433 26.0333C21.5219 26.2778 21.6608 26.4833 21.8497 26.65C22.0386 26.8166 22.2552 26.9222 22.4997 26.9666L29.533 28.0333L29.133 30.6666Z" fill="#333333"></path>
+        </symbol>
+        <symbol id="icon-fast" viewBox="0 0 32 32" fill="none">
+            <path d="M16.0003 29.3334C14.1559 29.3334 12.4225 28.9834 10.8003 28.2834C9.1781 27.5834 7.76699 26.6334 6.56699 25.4334C5.36699 24.2334 4.41699 22.8222 3.71699 21.2C3.01699 19.5778 2.66699 17.8445 2.66699 16C2.66699 14.1556 3.01699 12.4222 3.71699 10.8C4.41699 9.1778 5.36699 7.76669 6.56699 6.56669C7.76699 5.36669 9.1781 4.41669 10.8003 3.71669C12.4225 3.01669 14.1559 2.66669 16.0003 2.66669C17.8448 2.66669 19.5781 3.01669 21.2003 3.71669C22.8225 4.41669 24.2337 5.36669 25.4337 6.56669C26.6337 7.76669 27.5837 9.1778 28.2837 10.8C28.9837 12.4222 29.3337 14.1556 29.3337 16C29.3337 16.6 29.3003 17.1889 29.2337 17.7667C29.167 18.3445 29.0559 18.9111 28.9003 19.4667C28.5892 19.1111 28.2281 18.8111 27.817 18.5667C27.4059 18.3222 26.9559 18.1556 26.467 18.0667C26.5337 17.7334 26.5837 17.3945 26.617 17.05C26.6503 16.7056 26.667 16.3556 26.667 16C26.667 13.0222 25.6337 10.5 23.567 8.43335C21.5003 6.36669 18.9781 5.33335 16.0003 5.33335C13.0225 5.33335 10.5003 6.36669 8.43366 8.43335C6.36699 10.5 5.33366 13.0222 5.33366 16C5.33366 18.9778 6.36699 21.5 8.43366 23.5667C10.5003 25.6334 13.0225 26.6667 16.0003 26.6667C17.1337 26.6667 18.217 26.5 19.2503 26.1667C20.2837 25.8334 21.2337 25.3667 22.1003 24.7667C22.367 25.1445 22.6948 25.4778 23.0837 25.7667C23.4725 26.0556 23.8892 26.2778 24.3337 26.4334C23.2003 27.3445 21.9281 28.0556 20.517 28.5667C19.1059 29.0778 17.6003 29.3334 16.0003 29.3334ZM25.667 24C25.2003 24 24.8059 23.8389 24.4837 23.5167C24.1614 23.1945 24.0003 22.8 24.0003 22.3334C24.0003 21.8667 24.1614 21.4722 24.4837 21.15C24.8059 20.8278 25.2003 20.6667 25.667 20.6667C26.1337 20.6667 26.5281 20.8278 26.8503 21.15C27.1725 21.4722 27.3337 21.8667 27.3337 22.3334C27.3337 22.8 27.1725 23.1945 26.8503 23.5167C26.5281 23.8389 26.1337 24 25.667 24ZM20.4003 22.2667L14.667 16.5334V9.33335H17.3337V15.4667L22.267 20.4L20.4003 22.2667Z" fill="#333333"></path>
+        </symbol>
+        <symbol id="icon-accuracy" viewBox="0 0 32 32" fill="none">
+            <path d="M6.66667 25.3333V6.66667V21.8V18.9667V25.3333ZM6.66667 28C5.93333 28 5.30556 27.7389 4.78333 27.2167C4.26111 26.6944 4 26.0667 4 25.3333V6.66667C4 5.93333 4.26111 5.30556 4.78333 4.78333C5.30556 4.26111 5.93333 4 6.66667 4H25.3333C26.0667 4 26.6944 4.26111 27.2167 4.78333C27.7389 5.30556 28 5.93333 28 6.66667V17.3333H25.3333V6.66667H6.66667V25.3333H16V28H6.66667ZM23.1333 29.3333L18.4 24.6L20.3 22.7333L23.1333 25.5667L28.8 19.9L30.6667 21.8L23.1333 29.3333ZM10.6667 17.3333C11.0444 17.3333 11.3611 17.2056 11.6167 16.95C11.8722 16.6944 12 16.3778 12 16C12 15.6222 11.8722 15.3056 11.6167 15.05C11.3611 14.7944 11.0444 14.6667 10.6667 14.6667C10.2889 14.6667 9.97222 14.7944 9.71667 15.05C9.46111 15.3056 9.33333 15.6222 9.33333 16C9.33333 16.3778 9.46111 16.6944 9.71667 16.95C9.97222 17.2056 10.2889 17.3333 10.6667 17.3333ZM10.6667 12C11.0444 12 11.3611 11.8722 11.6167 11.6167C11.8722 11.3611 12 11.0444 12 10.6667C12 10.2889 11.8722 9.97222 11.6167 9.71667C11.3611 9.46111 11.0444 9.33333 10.6667 9.33333C10.2889 9.33333 9.97222 9.46111 9.71667 9.71667C9.46111 9.97222 9.33333 10.2889 9.33333 10.6667C9.33333 11.0444 9.46111 11.3611 9.71667 11.6167C9.97222 11.8722 10.2889 12 10.6667 12ZM14.6667 17.3333H22.6667V14.6667H14.6667V17.3333ZM14.6667 12H22.6667V9.33333H14.6667V12Z" fill="#333333"></path>
+        </symbol>
+        <symbol id="icon-limitation" viewBox="0 0 32 32" fill="none">
+            <path d="M7.80032 22.8C8.93366 21.9333 10.2003 21.25 11.6003 20.75C13.0003 20.25 14.467 20 16.0003 20C17.5337 20 19.0003 20.25 20.4003 20.75C21.8003 21.25 23.067 21.9333 24.2003 22.8C24.9781 21.8889 25.5837 20.8556 26.017 19.7C26.4503 18.5444 26.667 17.3111 26.667 16C26.667 13.0444 25.6281 10.5278 23.5503 8.45C21.4725 6.37222 18.9559 5.33333 16.0003 5.33333C13.0448 5.33333 10.5281 6.37222 8.45032 8.45C6.37255 10.5278 5.33366 13.0444 5.33366 16C5.33366 17.3111 5.55032 18.5444 5.98366 19.7C6.41699 20.8556 7.02255 21.8889 7.80032 22.8ZM16.0003 17.3333C14.6892 17.3333 13.5837 16.8833 12.6837 15.9833C11.7837 15.0833 11.3337 13.9778 11.3337 12.6667C11.3337 11.3556 11.7837 10.25 12.6837 9.35C13.5837 8.45 14.6892 8 16.0003 8C17.3114 8 18.417 8.45 19.317 9.35C20.217 10.25 20.667 11.3556 20.667 12.6667C20.667 13.9778 20.217 15.0833 19.317 15.9833C18.417 16.8833 17.3114 17.3333 16.0003 17.3333ZM16.0003 29.3333C14.1559 29.3333 12.4225 28.9833 10.8003 28.2833C9.1781 27.5833 7.76699 26.6333 6.56699 25.4333C5.36699 24.2333 4.41699 22.8222 3.71699 21.2C3.01699 19.5778 2.66699 17.8444 2.66699 16C2.66699 14.1556 3.01699 12.4222 3.71699 10.8C4.41699 9.17778 5.36699 7.76667 6.56699 6.56667C7.76699 5.36667 9.1781 4.41667 10.8003 3.71667C12.4225 3.01667 14.1559 2.66667 16.0003 2.66667C17.8448 2.66667 19.5781 3.01667 21.2003 3.71667C22.8225 4.41667 24.2337 5.36667 25.4337 6.56667C26.6337 7.76667 27.5837 9.17778 28.2837 10.8C28.9837 12.4222 29.3337 14.1556 29.3337 16C29.3337 17.8444 28.9837 19.5778 28.2837 21.2C27.5837 22.8222 26.6337 24.2333 25.4337 25.4333C24.2337 26.6333 22.8225 27.5833 21.2003 28.2833C19.5781 28.9833 17.8448 29.3333 16.0003 29.3333ZM16.0003 26.6667C17.1781 26.6667 18.2892 26.4944 19.3337 26.15C20.3781 25.8056 21.3337 25.3111 22.2003 24.6667C21.3337 24.0222 20.3781 23.5278 19.3337 23.1833C18.2892 22.8389 17.1781 22.6667 16.0003 22.6667C14.8225 22.6667 13.7114 22.8389 12.667 23.1833C11.6225 23.5278 10.667 24.0222 9.80032 24.6667C10.667 25.3111 11.6225 25.8056 12.667 26.15C13.7114 26.4944 14.8225 26.6667 16.0003 26.6667ZM16.0003 14.6667C16.5781 14.6667 17.0559 14.4778 17.4337 14.1C17.8114 13.7222 18.0003 13.2444 18.0003 12.6667C18.0003 12.0889 17.8114 11.6111 17.4337 11.2333C17.0559 10.8556 16.5781 10.6667 16.0003 10.6667C15.4225 10.6667 14.9448 10.8556 14.567 11.2333C14.1892 11.6111 14.0003 12.0889 14.0003 12.6667C14.0003 13.2444 14.1892 13.7222 14.567 14.1C14.9448 14.4778 15.4225 14.6667 16.0003 14.6667Z" fill="#333333"></path>
+        </symbol>
+        <symbol id="icon-disclaimer" viewBox="0 0 32 32" fill="none">
+            <path d="M15.9997 21.3333C16.3775 21.3333 16.6941 21.2055 16.9497 20.95C17.2052 20.6944 17.333 20.3778 17.333 20C17.333 19.6222 17.2052 19.3055 16.9497 19.05C16.6941 18.7944 16.3775 18.6667 15.9997 18.6667C15.6219 18.6667 15.3052 18.7944 15.0497 19.05C14.7941 19.3055 14.6663 19.6222 14.6663 20C14.6663 20.3778 14.7941 20.6944 15.0497 20.95C15.3052 21.2055 15.6219 21.3333 15.9997 21.3333ZM14.6663 16H17.333V9.33332H14.6663V16ZM15.9997 29.3333C12.9108 28.5555 10.3608 26.7833 8.34967 24.0167C6.33856 21.25 5.33301 18.1778 5.33301 14.8V6.66666L15.9997 2.66666L26.6663 6.66666V14.8C26.6663 18.1778 25.6608 21.25 23.6497 24.0167C21.6386 26.7833 19.0886 28.5555 15.9997 29.3333ZM15.9997 26.5333C18.3108 25.8 20.2219 24.3333 21.733 22.1333C23.2441 19.9333 23.9997 17.4889 23.9997 14.8V8.49999L15.9997 5.49999L7.99967 8.49999V14.8C7.99967 17.4889 8.75523 19.9333 10.2663 22.1333C11.7775 24.3333 13.6886 25.8 15.9997 26.5333Z" fill="#333333"></path>
+        </symbol>
+        <symbol id="icon-third-party" viewBox="0 0 32 32" fill="none">
+            <path d="M6.66667 26.6667C5.93333 26.6667 5.30556 26.4055 4.78333 25.8833C4.26111 25.3611 4 24.7333 4 24V5.33332C4 4.59999 4.26111 3.97221 4.78333 3.44999C5.30556 2.92777 5.93333 2.66666 6.66667 2.66666H25.3333C26.0667 2.66666 26.6944 2.92777 27.2167 3.44999C27.7389 3.97221 28 4.59999 28 5.33332V14.8C27.7778 14.7555 27.5611 14.7222 27.35 14.7C27.1389 14.6778 26.9111 14.6667 26.6667 14.6667H25.3333V5.33332H6.66667V24H10.8C10.8889 24.4889 11.0056 24.9555 11.15 25.4C11.2944 25.8444 11.4889 26.2667 11.7333 26.6667H6.66667ZM6.66667 22.6667V24V5.33332V22.6667ZM9.33333 21.3333H10.8C10.9778 20.2444 11.3667 19.2389 11.9667 18.3167C12.5667 17.3944 13.3333 16.6222 14.2667 16H9.33333V21.3333ZM9.33333 13.3333H14.6667V7.99999H9.33333V13.3333ZM18.6667 28C17.2 28 15.9444 27.4778 14.9 26.4333C13.8556 25.3889 13.3333 24.1333 13.3333 22.6667C13.3333 21.2 13.8556 19.9444 14.9 18.9C15.9444 17.8555 17.2 17.3333 18.6667 17.3333H21.3333V20H18.6667C17.9333 20 17.3056 20.2611 16.7833 20.7833C16.2611 21.3055 16 21.9333 16 22.6667C16 23.4 16.2611 24.0278 16.7833 24.55C17.3056 25.0722 17.9333 25.3333 18.6667 25.3333H21.3333V28H18.6667ZM17.3333 13.3333H22.6667V7.99999H17.3333V13.3333ZM18.6667 24V21.3333H26.6667V24H18.6667ZM24 28V25.3333H26.6667C27.4 25.3333 28.0278 25.0722 28.55 24.55C29.0722 24.0278 29.3333 23.4 29.3333 22.6667C29.3333 21.9333 29.0722 21.3055 28.55 20.7833C28.0278 20.2611 27.4 20 26.6667 20H24V17.3333H26.6667C28.1333 17.3333 29.3889 17.85 30.4333 18.8833C31.4778 19.9167 32 21.1778 32 22.6667C32 24.1333 31.4778 25.3889 30.4333 26.4333C29.3889 27.4778 28.1333 28 26.6667 28H24Z" fill="#333333"></path>
+        </symbol>
+    </defs>
+</svg>
+
+<div class="about-us">
+    <div class="about-us-container">
+        <h2 class="about-us-title">About Us</h2>
+        <p class="about-us-content">
+            Welcome to Phone UsLowCostHousing. We deliver free information about phone providers and state qualification for
+            lifeline and ACP programs to help you get a free cell phone.
+            Please feel free to contact us if you need any further information via support@uslowcosthousing.com.
+        </p>
+        <img src="./img/about-us.avif" alt="about-us" class="about-us-image">
+    </div>
+</div>
+
+<div class="our-features">
+    <div class="our-features-container">
+        <h2 class="our-features-title">Our Features</h2>
+        <p class="our-features-content">
+            Our site delivers practical, user-friendly tools and curated content to simplify your needs and enhance your
+            experience.
+        </p>
+        <div class="our-features-list">
+            <div class="our-feature-item">
+                <svg class="our-feature-icon">
+                    <use xlink:href="#icon-free"></use>
+                </svg>
+                <h3 class="our-feature">FREE</h3>
+                <p class="our-feature-description">
+                    Our site is 100% free—no hidden fees, obligations, or risks. Explore our website to see popular smartphones &amp;
+                    wireless providers anytime!
+                </p>
+            </div>
+            <div class="our-feature-item">
+                <svg class="our-feature-icon">
+                    <use xlink:href="#icon-easy"></use>
+                </svg>
+                <h3 class="our-feature">EASY</h3>
+                <p class="our-feature-description">
+                    Compare different programs and pick the best plan right at your fingertips. Navigate seamlessly and discover
+                    free phones with ease!
+                </p>
+            </div>
+            <div class="our-feature-item">
+                <svg class="our-feature-icon">
+                    <use xlink:href="#icon-fast"></use>
+                </svg>
+                <h3 class="our-feature">FAST</h3>
+                <p class="our-feature-description">
+                    Get your free cell phone, tablet, monthly service and internet in minutes. Skip the search and start enhancing
+                    your
+                    daily routine with quick access!
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="disclaimer">
+    <div class="disclaimer-container">
+        <h2 class="disclaimer-title">Disclaimer</h2>
+        <p class="disclaimer-content">
+            This disclaimer clarifies our liability limits, warranty exclusions, and info accuracy terms.
+        </p>
+        <div class="disclaimer-grid">
+            <div class="disclaimer-item">
+                <svg class="disclaimer-icon">
+                    <use xlink:href="#icon-accuracy"></use>
+                </svg>
+                <h3 class="disclaimer-item-title">Accuracy of Information</h3>
+                <p class="disclaimer-item-content">
+                    We provide content for general informational use only; we strive for accuracy but do not guarantee
+                    completeness, reliability, or timeliness, and reliance on the information is at your own risk.
+                </p>
+            </div>
+            <div class="disclaimer-item">
+                <svg class="disclaimer-icon">
+                    <use xlink:href="#icon-limitation"></use>
+                </svg>
+                <h3 class="disclaimer-item-title">Limitation of Liability</h3>
+                <p class="disclaimer-item-content">
+                    We are not liable for any damages from using our website or content (including errors or third-party links),
+                    and you access the site voluntarily, assuming full responsibility for decisions based on its information.
+                </p>
+            </div>
+            <div class="disclaimer-item">
+                <svg class="disclaimer-icon">
+                    <use xlink:href="#icon-disclaimer"></use>
+                </svg>
+                <h3 class="disclaimer-item-title">Disclaimer of Warranty</h3>
+                <p class="disclaimer-item-content">
+                    All content is provided "as is" without express or implied warranties, and we do not guarantee the site is
+                    error-free, secure, or continuously available.
+                </p>
+            </div>
+            <div class="disclaimer-item">
+                <svg class="disclaimer-icon">
+                    <use xlink:href="#icon-third-party"></use>
+                </svg>
+                <h3 class="disclaimer-item-title">Third-Party Links</h3>
+                <p class="disclaimer-item-content">
+                    Our website may include external third-party links—we do not control, endorse, or verify these sites, and your
+                    use of them is solely at your own risk.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id = "footer">
+
+</footer>
+
+<div id="backdrop">
+    <div class="inner">
+        <img src="/Public/Images/arrow.png" class="arrow" alt="arrow">
+        Click Allow to get alerts about free cell phones!    </div>
+</div>
+
+<script src="./js/jquery-3.0.0.min.js"></script>
+
+<script>
+    // 加载 header
+    fetch('./header.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+
+            $(".icon-nav").click(function() {
+                $(".nav-cover").toggleClass('expand');
+                $(".header-nav").toggleClass('expand');
+            })
+            $(".nav-cover").click(function() {
+                $(".nav-cover").toggleClass('expand');
+                $(".header-nav").toggleClass('expand');
+            })
+
+            $(".nav-item.expand .nav-con").on('click', function(e) {
+                if ($(e.target).closest('.icon-go').length) {
+                    e.preventDefault();
+                    $(this).parent().find(".nav-sub-list").toggleClass("expand");
+                }
+            });
+        });
+
+    // 加载 footer
+    fetch('./footer.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+</script>
+
+</body>
+</html>
