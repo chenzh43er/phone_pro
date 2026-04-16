@@ -71,7 +71,7 @@
 	color: #666;
 }
 .ab-indexitm-banner {
-	background-image: url(../Images/phone/phone-desktop-banner.webp);
+	background-image: url(../img/phone-desktop-banner.webp);
 	background-color: #f7f7f7;
 }
 .ab-indexitm-banner .indexitm-banner-tit {
@@ -414,10 +414,10 @@ tr:nth-child(2) {
 	background-color: #0065e1;
 }
 .related-box1 {
-	background-image: url(../Images/phone/PhoneProviders.webp);
+	background-image: url(../img/PhoneProviders.webp);
 }
 .related-box2 {
-	background-image: url(../Images/phone/StateQualifications.webp);
+	background-image: url(../img/StateQualifications.webp);
 }
 .logo img {
 	height: 35px;
@@ -588,7 +588,7 @@ tr:nth-child(2) {
 		margin-bottom: 28px;
 	}
 	.ab-indexitm-banner {
-		background-image: url(../Images/phone/phone-mobile-banner.webp);
+		background-image: url(../img/phone-mobile-banner.webp);
 	}
 	.imgli-box {
 		margin-top: 26px;
@@ -716,7 +716,7 @@ tr:nth-child(2) {
 }
 .christmas-banner {
 	height: 450px;
-	background-image: url(../Images/phone/Christmas/ULCH-phone-des.avif);
+	background-image: url(../img/ULCH-phone-des.avif);
 	background-size: cover;
 	background-position: center;
 	display: flex;
@@ -786,7 +786,7 @@ tr:nth-child(2) {
 		justify-content: flex-start;
 		gap: 24px;
 		background-color: rgba(51, 51, 51, 0.2);
-		background-image: url(../Images/phone/Christmas/ULCH-phone-mob.avif);
+		background-image: url(/img/ULCH-phone-des.avif);
 		background-blend-mode: multiply;
 	}
 	.banner-content {
