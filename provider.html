@@ -158,7 +158,7 @@
             <option value="provider/state/all">All State</option>
             <option value="provider/state/al"selected>Alabama</option><option value="provider/state/ak">Alaska</option><option value="provider/state/az">Arizona</option><option value="provider/state/ar">Arkansas</option><option value="provider/state/ca">California</option><option value="provider/state/co">Colorado</option><option value="provider/state/ct">Connecticut</option><option value="provider/state/de">Delaware</option><option value="provider/state/fl">Florida</option><option value="provider/state/ga">Georgia</option><option value="provider/state/hi">Hawaii</option><option value="provider/state/id">Idaho</option><option value="provider/state/in">Indiana</option><option value="provider/state/ia">Iowa</option><option value="provider/state/ks">Kansas</option><option value="provider/state/ky">Kentucky</option><option value="provider/state/il">lllinois</option><option value="provider/state/la">Louisiana</option><option value="provider/state/me">Maine</option><option value="provider/state/md">Maryland</option><option value="provider/state/ma">Massachusetts</option><option value="provider/state/mi">Michigan</option><option value="provider/state/mn">Minnesota</option><option value="provider/state/ms">Mississippi</option><option value="provider/state/mo">Missouri</option><option value="provider/state/ne">Nebraska</option><option value="provider/state/nv">Nevada</option><option value="provider/state/nh">New Hampshire</option><option value="provider/state/nj">New Jersey</option><option value="provider/state/nm">New Mexico</option><option value="provider/state/ny">New York</option><option value="provider/state/nc">North Carolina</option><option value="provider/state/nd">North Dakota</option><option value="provider/state/oh">Ohio</option><option value="provider/state/ok">Oklahoma</option><option value="provider/state/or">Oregon</option><option value="provider/state/pa">Pennsylvania</option><option value="provider/state/pr">Puerto Rico</option><option value="provider/state/ri">Rhode Island</option><option value="provider/state/sc">South Carolina</option><option value="provider/state/sd">South Dakota</option><option value="provider/state/tn">Tennessee</option><option value="provider/state/tx">Texas</option><option value="provider/state/ut">Utah</option><option value="provider/state/vt">Vermont</option><option value="provider/state/va">Virginia</option><option value="provider/state/wa">Washington</option><option value="provider/state/dc">Washington, D.C.</option><option value="provider/state/wv">West Virginia</option><option value="provider/state/wi">Wisconsin</option><option value="provider/state/wy">Wyoming</option>            </select>
     </div> -->
-    <ul class="statelists" style="font-size: 0px; height: auto !important;">
+    <ul class="statelists" style="font-size: 0px; height: auto !important;" id = "statelists">
       <li class="statelists-imgli">
         <div class="statelists-link">
           <a href="/provider/assurance-wireless/"></a>
@@ -450,6 +450,93 @@
           .then(data => {
             document.getElementById('footer').innerHTML = data;
           });
+</script>
+
+<script type="module">
+  import { fetchProvidersByState } from './js/supabaseApi.js';
+
+  async function renderProvidersByState(stateName) {
+    const container = document.getElementById('statelists');
+
+    container.innerHTML = '<li>Loading...</li>';
+
+    try {
+      const { data } = await fetchProvidersByState(stateName);
+
+      container.innerHTML = '';
+
+      if (!data || data.length === 0) {
+        container.innerHTML = '<li>No providers found</li>';
+        return;
+      }
+
+      data.forEach(item => {
+
+        let img_src = `https://pub-d72ba70cb88e46a09362265194658ce1.r2.dev/images/${item.img_src || ''}`
+
+        const li = document.createElement('li');
+        li.className = 'statelists-imgli';
+
+        li.innerHTML = `
+          <div class="statelists-link">
+            <a href="./detail.html?id=${item.id}"></a>
+
+            <div class="imgli-box">
+              <img loading="lazy"
+                   src="${img_src}"
+                   alt="${item.title || ''}"
+                   class="most-img">
+            </div>
+
+            <div class="statelists-right">
+              <div class="phonetitle">
+                ${item.title || item.name}
+                <span class="phone-sign free">Free</span>
+              </div>
+
+              <div class="phone-info">
+                <p class="p">
+                  ${item.info || ''}
+                </p>
+              </div>
+
+              <div class="phone-view">
+                <svg class="phone" width="14" height="16">
+                  <use xlink:href="#phone"></use>
+                </svg>
+                <span>Click to view &gt;</span>
+              </div>
+            </div>
+
+            <div class="most-phone-btn">
+              View Details
+            </div>
+          </div>
+        `;
+
+        container.appendChild(li);
+      });
+
+    } catch (err) {
+      console.error(err);
+      container.innerHTML = '<li>加载失败</li>';
+    }
+  }
+
+  // 👉 URL 格式处理（title → slug）
+  function formatProviderUrl(title) {
+    return title
+            ?.toLowerCase()
+            .replace(/\s+/g, '-')
+            .replace(/[^\w-]/g, '') || '';
+  }
+
+  // 示例：页面加载默认 Alabama
+  document.addEventListener('DOMContentLoaded', () => {
+    const params = new URLSearchParams(window.location.search);
+    const state = params.get('state');
+    renderProvidersByState(state);
+  });
 </script>
 
 </body>

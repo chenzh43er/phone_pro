@@ -906,7 +906,7 @@
             listContainer.innerHTML = '';
 
             data.forEach(item => {
-                const stateCode = formatStateCode(item.state);
+                const stateCode = item.state;
 
                 // ✅ 渲染列表
                 const li = document.createElement('li');

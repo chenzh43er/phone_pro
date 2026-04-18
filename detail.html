@@ -334,9 +334,9 @@
     </div>
 
     <div class="see-qualification">
-      <img src="/Public/Images/phone/see-qualification.svg" alt="" class="sq-img">
+      <img src="./img/see-qualification.svg" alt="" class="sq-img">
       <div class="sq-tl">See Qualification</div>
-      <a href="/qualification/">
+      <a href="./state.html">
         <div class="sq-btn">
           View Content
         </div>
@@ -426,6 +426,155 @@
         .then(data => {
             document.getElementById('footer').innerHTML = data;
         });
+</script>
+
+<script type="module">
+    import { fetchProviderById } from './js/supabaseApi.js';
+
+    document.addEventListener('DOMContentLoaded', renderProviderDetail);
+
+    async function renderProviderDetail() {
+        const id = getIdFromQuery();
+        if (!id) return;
+
+        try {
+            const { data } = await fetchProviderById(id);
+            if (!data) return;
+
+            const title = data.title || data.name || '';
+
+            // ✅ 标题
+            setText('.title', title);
+
+            // ✅ 面包屑
+            const crumbs = document.querySelectorAll('.bread_crumbs i[itemprop="name"]');
+            if (crumbs.length > 0) {
+                crumbs[crumbs.length - 1].textContent = title;
+            }
+
+            // ✅ 联系信息（为空隐藏）
+            setTextOrHide('.info li:nth-child(1)', '.info li:nth-child(1) .info_span', data.contact_phone);
+            setTextOrHide('.info li:nth-child(2)', '.info li:nth-child(2) .info_span', data.contact_email);
+            setTextOrHide('.info li:nth-child(3)', '.info li:nth-child(3) .info_span', data.contact_address);
+            setLinkOrHide('.info li:nth-child(4)', '.info li:nth-child(4) a', data.contact_website);
+
+            // ✅ 描述
+            setText('.phone-desc', data.description || data.info);
+
+            // ✅ 套餐
+            renderPlans(data.plans);
+
+            // ✅ Qualification & Special Plans（🔥核心逻辑）
+            const sections = document.querySelectorAll('.dt-provided');
+
+            // Qualification（为空 → 整块隐藏）
+            if (sections[0]) {
+                if (!data.qualification_html || data.qualification_html.trim() === '') {
+                    sections[0].style.display = 'none';
+                } else {
+                    const essay = sections[0].querySelector('.essay');
+                    if (essay) {
+                        essay.innerHTML = data.qualification_html;
+                    }
+                }
+            }
+
+            // Special plans（为空 → 整块隐藏）
+            if (sections[1]) {
+                if (!data.special_plans_html || data.special_plans_html.trim() === '') {
+                    sections[1].style.display = 'none';
+                } else {
+                    const essay = sections[1].querySelector('.essay');
+                    if (essay) {
+                        essay.innerHTML = data.special_plans_html;
+                    }
+                }
+            }
+
+        } catch (err) {
+            console.error('renderProviderDetail error:', err);
+        }
+    }
+
+    // 🚀 渲染套餐
+    function renderPlans(plans) {
+        const container = document.querySelector('.phone-card-box');
+        if (!container) return;
+
+        container.innerHTML = '';
+
+        if (!plans || plans.length === 0) {
+            container.innerHTML = '<p>No plans available</p>';
+            return;
+        }
+
+        plans.forEach(plan => {
+            const div = document.createElement('div');
+            div.className = 'phone-card-item';
+
+            div.innerHTML = `
+                <div class="phone-card">
+                  <h5 class="phone-card-tit">${plan.name || ''}</h5>
+                  <ul class="phone-card-cont">
+                    ${(plan.features || []).map(f => `
+                      <li>
+                        <span class="infoname">
+                          <svg class="icon-detail">
+                            <use xlink:href="#g01"></use>
+                          </svg>
+                        </span>
+                        <span class="info_span">${f}</span>
+                      </li>
+                    `).join('')}
+                  </ul>
+                </div>
+            `;
+
+            container.appendChild(div);
+        });
+    }
+
+    // ✅ 设置文本
+    function setText(selector, value) {
+        const el = document.querySelector(selector);
+        if (el) el.textContent = value || '';
+    }
+
+    // ✅ 文本为空 → 隐藏整行
+    function setTextOrHide(liSelector, textSelector, value) {
+        const li = document.querySelector(liSelector);
+        const textEl = document.querySelector(textSelector);
+
+        if (!li) return;
+
+        if (!value || value.trim() === '') {
+            li.style.display = 'none';
+        } else {
+            li.style.display = '';
+            if (textEl) textEl.textContent = value;
+        }
+    }
+
+    // ✅ link 为空 → 隐藏
+    function setLinkOrHide(liSelector, linkSelector, url) {
+        const li = document.querySelector(liSelector);
+        const linkEl = document.querySelector(linkSelector);
+
+        if (!li) return;
+
+        if (!url || url.trim() === '') {
+            li.style.display = 'none';
+        } else {
+            li.style.display = '';
+            if (linkEl) linkEl.href = url;
+        }
+    }
+
+    // ✅ 获取 URL 参数
+    function getIdFromQuery() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('id');
+    }
 </script>
 
 </body>
