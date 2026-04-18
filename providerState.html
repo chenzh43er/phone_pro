@@ -911,7 +911,7 @@
                 // ✅ 渲染列表
                 const li = document.createElement('li');
                 li.innerHTML = `
-          <a href="./provider.html?state=${stateCode}/">
+          <a href="./provider.html?state=${stateCode}">
             <span class="location_box">
               <svg class="location">
                 <use xlink:href="#location"></use>
@@ -928,7 +928,7 @@
 
                 // ✅ 渲染 select
                 const option = document.createElement('option');
-                option.value = `./provider.html?state=${stateCode}/`;
+                option.value = `./provider.html?state=${stateCode}`;
                 option.textContent = `${item.state} (${item.total_count})`;
 
                 select.appendChild(option);
