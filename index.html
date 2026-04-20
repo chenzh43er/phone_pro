@@ -131,7 +131,7 @@
         wireless providers!
       </p>
     </div>
-    <a href="/provider/" class="find-btn">
+    <a href="/provider/" class="find-btn" id = "find-btn">
       Start Here
       <svg class="right-arrow" width="16" height="16" fill="#fff">
         <use xlink:href="#right-arrow"></use>
@@ -149,47 +149,47 @@
   </div>
   <ul class="top-search break-related">
     <li>
-      <a href="/provider/state/ny/">
+      <a href="./provider.html?state=New York">
         <img src="./img/NewYork.webp" alt="New York">
         <div class="top-tit">New York</div>
       </a>
     </li>
     <li>
       <div>
-        <a href="/provider/state/ca/">
+        <a href="./provider.html?state=California">
           <img src="./img/California.webp" alt="California">
           <div class="top-tit">California</div>
         </a>
       </div>
       <div>
-        <a href="/provider/state/fl/">
+        <a href="./provider.html?state=Florida">
           <img src="./img/Florida.webp" alt="Florida">
           <div class="top-tit">Florida</div>
         </a>
       </div>
     </li>
     <li>
-      <a href="/provider/state/ga/">
+      <a href="./provider.html?state=Georgia">
         <img src="./img/Georgia.webp" alt="Georgia">
         <div class="top-tit">Georgia</div>
       </a>
     </li>
     <li>
       <div>
-        <a href="/provider/state/nc/">
+        <a href="./provider.html?state=North Carolina">
           <img src="./img/NorthCarolina.webp" alt="North Carolina">
           <div class="top-tit">North Carolina</div>
         </a>
       </div>
       <div>
-        <a href="/provider/state/tx/">
+        <a href="./provider.html?state=Texas">
           <img src="./img/Texas.webp" alt="Texas">
           <div class="top-tit">Texas</div>
         </a>
       </div>
     </li>
   </ul>
-  <a href="/provider/" class="view-all">View free phones in all States</a>
+  <a href="/provider/" class="view-all" id = "viewAll">View free phones in all States</a>
 </div>
 <div class="index-bg">
   <div class="wrapper">
@@ -223,7 +223,7 @@
         <div class="house-box">
           <div class="related-tit">Phone Providers</div>
           <p class="related-subtit"></p>
-          <a href="/provider/">
+          <a href="/provider/" id = "btn_provider">
             <div class="related-btn">Search Now</div>
           </a>
         </div>
@@ -234,7 +234,7 @@
         <div class="house-box">
           <div class="related-tit">State Qualifications</div>
           <p class="related-subtit"></p>
-          <a href="/qualification/">
+          <a href="/qualification/" id = "btn_qua">
             <div class="related-btn">Search Now</div>
           </a>
         </div>
@@ -247,7 +247,7 @@
   <ul class="most-list">
     <li>
       <div class="most-box">
-        <a href="/posts/discover-the-best-free-government-cell-phones/" class="href-item"></a>
+        <a href="./post.html?postid=10024" class="href-item"></a>
         <img src="//cdn.uslowcosthousing.com/Images/cover/discover-the-best-free-government-cell-phones.webp" alt="discover-the-best-free-government-cell-phones" class="most-img">
         <h5 class="most-tit">Discover The Best Free Government Cell Phones!</h5>
         <div class="most-bottom">
@@ -256,7 +256,7 @@
       </div>
     </li><li>
     <div class="most-box">
-      <a href="/posts/get-your-own-free-cell-phone-now/" class="href-item"></a>
+      <a href="./post.html?postid=10023" class="href-item"></a>
       <img src="//cdn.uslowcosthousing.com/Images/cover/get-your-own-free-cell-phone-now.webp" alt="get-your-own-free-cell-phone-now" class="most-img">
       <h5 class="most-tit">Get Your Own Free Cell Phone Now!</h5>
       <div class="most-bottom">
@@ -265,7 +265,7 @@
     </div>
   </li><li>
     <div class="most-box">
-      <a href="/posts/the-best-free-smartphone-deals-top-5-companies-revealed/" class="href-item"></a>
+      <a href="./post.html?postid=10022" class="href-item"></a>
       <img src="//cdn.uslowcosthousing.com/Images/cover/the-best-free-smartphone-deals-top-5-companies-revealed.webp" alt="the-best-free-smartphone-deals-top-5-companies-revealed" class="most-img">
       <h5 class="most-tit">The Best Free Smartphone Deals - Top 5 Companies Revealed!</h5>
       <div class="most-bottom">
@@ -318,6 +318,12 @@
           .then(data => {
             document.getElementById('footer').innerHTML = data;
           });
+
+  document.getElementById("find-btn").href = "./state.html"
+  document.getElementById("btn_qua").href = "./stateq.html"
+  document.getElementById("btn_provider").href = "./state.html"
+  document.getElementById("viewAll").href = "./state.html"
+
 </script>
 
 
