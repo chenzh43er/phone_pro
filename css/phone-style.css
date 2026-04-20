@@ -4,7 +4,7 @@
 	font-display: swap;
 	font-family: googleSanstext;
 	src: local("GoogleSanstext Regular"), local("GoogleSanstext-Regular"),
-		url(../Fonts/googleSanstext-Regular.woff2) format("woff2");
+		url(../font/googleSanstext-Regular.woff2) format("woff2");
 	font-weight: 400;
 	font-style: normal;
 }
@@ -12,7 +12,7 @@
 	font-display: swap;
 	font-family: GoogleSans;
 	src: local("GoogleSans Regular"), local("GoogleSans-Regular"),
-		url(../Fonts/googleSans-Regular.woff2) format("woff2");
+		url(../font/googleSans-Regular.woff2) format("woff2");
 	font-weight: 400;
 	font-style: normal;
 }
@@ -20,8 +20,8 @@
 	font-display: swap;
 	font-family: GoogleSans;
 	src: local("Google Sans Medium"), local("GoogleSans-Medium"),
-		url(../Fonts/GoogleSans-Medium.woff2),
-		url(../Fonts/GoogleSans-Medium.ttf) format("truetype");
+		url(../font/GoogleSans-Medium.woff2),
+		url(../font/GoogleSans-Medium.ttf) format("truetype");
 	font-weight: 500;
 	font-style: normal;
 }
@@ -29,7 +29,7 @@
 	font-display: swap;
 	font-family: GoogleSans;
 	src: local("GoogleSans Bold"), local("GoogleSans-Bold"),
-		url(../Fonts/googleSans-Bold.woff2) format("woff2");
+		url(../font/googleSans-Bold.woff2) format("woff2");
 	font-weight: 700;
 	font-style: normal;
 }
