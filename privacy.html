@@ -127,7 +127,7 @@
     <h1>Privacy Policy</h1>
 
     <div class="content">
-        <main class="main-office">
+        <main class="main-office" id = "main-offiece">
             <b id="section-what-data-do-we-collect">What data do we collect?</b>
             <p>In some cases, we collect information regarding what pages within the site you look at, how long you look at them for and how many times you look at them. If you choose to log in the website via your Google account, your username and email address might be retained by us.</p><br>
             <b id="section-how-do-we-collect-your-data">How do we collect your data?</b>
@@ -151,7 +151,8 @@
             <b id="section-how-do-you-manage-cookies">How do you manage cookies?</b>
             <p>You can set your browser not to accept cookies, and allaboutcookies.org tells you how to remove cookies from your browser. However, in a few cases, some of our website features may not function as a result.</p><br>
             <b id="section-how-do-you-contact-us">How do you contact us?</b>
-            <p>If you have any questions about our privacy policy, the data we hold on you, or you would like to exercise one of your data protection rights, please do not hesitate to contact us via support@uslowcosthousing.com.</p>    </main>
+            <p>If you have any questions about our privacy policy, the data we hold on you, or you would like to exercise one of your data protection rights, please do not hesitate to contact us via support@uslowcosthousing.com.</p>
+        </main>
         <aside class="sidebar">
             <nav class="toc" id="toc">
                 </nav>
@@ -336,6 +337,34 @@
         .then(data => {
             document.getElementById('footer').innerHTML = data;
         });
+
+    const host = window.location.host;
+
+    document.getElementById("main-office").innerHTML = `            <b id="section-what-data-do-we-collect">What data do we collect?</b>
+            <p>In some cases, we collect information regarding what pages within the site you look at, how long you look at them for and how many times you look at them. If you choose to log in the website via your Google account, your username and email address might be retained by us.</p><br>
+            <b id="section-how-do-we-collect-your-data">How do we collect your data?</b>
+            <p>You directly provide Phone ${host} with most of the data we collect. We collect data and process data when you:</p>
+            <ul><li>Use or view our website via your browser's cookies.</li>
+                <li>Log in the website via your Google account. </li></ul><br>
+            <b id="section-how-will-we-use-your-data">How will we use your data?</b>
+            <p>We may use this information to determine how this website is being used, and to gauge popularity of different parts of the site. To determine how many times specific sections of the site are viewed so we can calculate the popularity of different establishments and so on. We may use this information to track abuse if it occurs.</p><br>
+            <b id="section-how-do-we-store-your-data">How do we store your data?</b>
+            <p>Phone ${host} securely stores your data when you log in our website via your Google account. We collect your favorite data directly in your browser, making it convenient for you to search for your preferred options later on.</p><br>
+            <b id="section-what-are-your-rights">What are your rights?</b><p>Phone ${host} would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p><ul><li>
+            The right to correction – You can ask us to promptly correct any inaccuracies or incomplete information in your data.</li>
+            <li>The right to deletion – You can request us to delete your personal data in certain situations.</li>
+            <li>The right to restrict processing – You can ask us to limit the processing of your personal data in certain situations.</li>
+            <li>The right to object to processing – You can object to us processing your personal data in certain situations.</li>
+            <li>The right to data portability – You can request us to transfer your data to another organization or to you, under certain conditions.</li></ul><br>
+            <b id="section-how-do-we-use-cookies">How do we use cookies?</b>
+            <p>Phone ${host} uses cookies in a range of ways to improve your experience on our website, including:</p>
+            <ul><li>Keeping you signed in.</li>
+                <li>Understanding how you use our website.</li></ul><br>
+            <b id="section-how-do-you-manage-cookies">How do you manage cookies?</b>
+            <p>You can set your browser not to accept cookies, and allaboutcookies.org tells you how to remove cookies from your browser. However, in a few cases, some of our website features may not function as a result.</p><br>
+            <b id="section-how-do-you-contact-us">How do you contact us?</b>
+            <p>If you have any questions about our privacy policy, the data we hold on you, or you would like to exercise one of your data protection rights, please do not hesitate to contact us via support@${host}</p>
+`
 </script>
 
 </body>

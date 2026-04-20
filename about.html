@@ -80,7 +80,7 @@
 <div class="about-us">
     <div class="about-us-container">
         <h2 class="about-us-title">About Us</h2>
-        <p class="about-us-content">
+        <p class="about-us-content" id = "aboutUs">
             Welcome to Phone UsLowCostHousing. We deliver free information about phone providers and state qualification for
             lifeline and ACP programs to help you get a free cell phone.
             Please feel free to contact us if you need any further information via support@uslowcosthousing.com.
@@ -225,6 +225,14 @@
         .then(data => {
             document.getElementById('footer').innerHTML = data;
         });
+
+    const host = window.location.host;
+    //console.log(host);
+
+    document.getElementById("aboutUs").innerHTML = `Welcome to Phone ${host}. We deliver free information about phone providers and state qualification for
+            lifeline and ACP programs to help you get a free cell phone.
+            Please feel free to contact us if you need any further information via support@${host}`
+
 </script>
 
 </body>
