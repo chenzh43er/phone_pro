@@ -11,6 +11,11 @@
     <link type="text/css" rel="stylesheet" href="./css/phone-office.css?v=1.20">
     <link type="text/css" rel="stylesheet" href="./css/phone.css?v=1.20">
     <script src="./js/utlParam.js"></script>
+    <style>
+        body {
+            visibility: hidden;
+        }
+    </style>
 </head>
 <body aria-hidden="false">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -304,6 +309,8 @@
 
                 container.appendChild(li);
             });
+
+            document.body.style.visibility = 'visible';
 
         } catch (err) {
             console.error(err);

@@ -11,6 +11,12 @@
   <link type="text/css" rel="stylesheet" href="./css/phone-office.css?v=1.20">
   <link type="text/css" rel="stylesheet" href="./css/phone.css?v=1.20">
   <script src="./js/utlParam.js"></script>
+
+  <style>
+    body {
+      visibility: hidden;
+    }
+  </style>
   </head>
 
 <body>
@@ -516,7 +522,7 @@
 
         container.appendChild(li);
       });
-
+      document.body.style.visibility = 'visible';
     } catch (err) {
       console.error(err);
       container.innerHTML = '<li>加载失败</li>';
@@ -536,6 +542,7 @@
     const params = new URLSearchParams(window.location.search);
     const state = params.get('state');
     renderProvidersByState(state);
+
   });
 </script>
 

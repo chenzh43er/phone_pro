@@ -10,7 +10,11 @@
   <link type="text/css" rel="stylesheet" href="./css/phone-style.css?v=1.20">
   <link type="text/css" rel="stylesheet" href="./css/phone-office.css?v=1.20">
   <link type="text/css" rel="stylesheet" href="./css/phone.css?v=1.20">
-
+  <style>
+    body {
+      visibility: hidden;
+    }
+  </style>
 </head>
 <body aria-hidden="false" style="">
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -345,7 +349,7 @@
 
         select.appendChild(option);
       });
-
+      document.body.style.visibility = 'visible';
     } catch (err) {
       console.error('renderStateSelect error:', err);
     }
