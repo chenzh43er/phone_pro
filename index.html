@@ -44,7 +44,7 @@
         <svg class="icon-search" width="16" height="16" style="fill: rgb(29 47 94 / 30%)">
           <use xlink:href="#icon-search"></use>
         </svg>
-        <select class="select-location" onchange="window.location=this.value;">
+        <select class="select-location" onchange="window.location=this.value;" id = "headerNav">
           <option value="" class="select-loc-item">Free Phones</option>
           <option value="/provider/state/al/" class="select-loc-item">Alabama</option>
           <option value="/provider/state/ak/" class="select-loc-item">Alaska</option>
@@ -57,7 +57,10 @@
           <option value="/provider/state/fl/" class="select-loc-item">Florida</option>
           <option value="/provider/state/ga/" class="select-loc-item">Georgia</option>
           <option value="/provider/state/hi/" class="select-loc-item">Hawaii</option>
-          <option value="/provider/state/id/" class="select-loc-item">Idaho</option><option value="/provider/state/in/" class="select-loc-item">Indiana</option><option value="/provider/state/ia/" class="select-loc-item">Iowa</option><option value="/provider/state/ks/" class="select-loc-item">Kansas</option><option value="/provider/state/ky/" class="select-loc-item">Kentucky</option><option value="/provider/state/il/" class="select-loc-item">lllinois</option><option value="/provider/state/la/" class="select-loc-item">Louisiana</option><option value="/provider/state/me/" class="select-loc-item">Maine</option><option value="/provider/state/md/" class="select-loc-item">Maryland</option><option value="/provider/state/ma/" class="select-loc-item">Massachusetts</option><option value="/provider/state/mi/" class="select-loc-item">Michigan</option><option value="/provider/state/mn/" class="select-loc-item">Minnesota</option><option value="/provider/state/ms/" class="select-loc-item">Mississippi</option><option value="/provider/state/mo/" class="select-loc-item">Missouri</option><option value="/provider/state/ne/" class="select-loc-item">Nebraska</option><option value="/provider/state/nv/" class="select-loc-item">Nevada</option><option value="/provider/state/nh/" class="select-loc-item">New Hampshire</option><option value="/provider/state/nj/" class="select-loc-item">New Jersey</option><option value="/provider/state/nm/" class="select-loc-item">New Mexico</option>
+          <option value="/provider/state/id/" class="select-loc-item">Idaho</option>
+          <option value="/provider/state/in/" class="select-loc-item">Indiana</option>
+          <option value="/provider/state/ia/" class="select-loc-item">Iowa</option>
+          <option value="/provider/state/ks/" class="select-loc-item">Kansas</option><option value="/provider/state/ky/" class="select-loc-item">Kentucky</option><option value="/provider/state/il/" class="select-loc-item">lllinois</option><option value="/provider/state/la/" class="select-loc-item">Louisiana</option><option value="/provider/state/me/" class="select-loc-item">Maine</option><option value="/provider/state/md/" class="select-loc-item">Maryland</option><option value="/provider/state/ma/" class="select-loc-item">Massachusetts</option><option value="/provider/state/mi/" class="select-loc-item">Michigan</option><option value="/provider/state/mn/" class="select-loc-item">Minnesota</option><option value="/provider/state/ms/" class="select-loc-item">Mississippi</option><option value="/provider/state/mo/" class="select-loc-item">Missouri</option><option value="/provider/state/ne/" class="select-loc-item">Nebraska</option><option value="/provider/state/nv/" class="select-loc-item">Nevada</option><option value="/provider/state/nh/" class="select-loc-item">New Hampshire</option><option value="/provider/state/nj/" class="select-loc-item">New Jersey</option><option value="/provider/state/nm/" class="select-loc-item">New Mexico</option>
           <option value="/provider/state/ny/" class="select-loc-item">New York</option><option value="/provider/state/nc/" class="select-loc-item">North Carolina</option><option value="/provider/state/nd/" class="select-loc-item">North Dakota</option><option value="/provider/state/oh/" class="select-loc-item">Ohio</option><option value="/provider/state/ok/" class="select-loc-item">Oklahoma</option><option value="/provider/state/or/" class="select-loc-item">Oregon</option><option value="/provider/state/pa/" class="select-loc-item">Pennsylvania</option><option value="/provider/state/pr/" class="select-loc-item">Puerto Rico</option><option value="/provider/state/ri/" class="select-loc-item">Rhode Island</option><option value="/provider/state/sc/" class="select-loc-item">South Carolina</option><option value="/provider/state/sd/" class="select-loc-item">South Dakota</option><option value="/provider/state/tn/" class="select-loc-item">Tennessee</option><option value="/provider/state/tx/" class="select-loc-item">Texas</option><option value="/provider/state/ut/" class="select-loc-item">Utah</option><option value="/provider/state/vt/" class="select-loc-item">Vermont</option><option value="/provider/state/va/" class="select-loc-item">Virginia</option><option value="/provider/state/wa/" class="select-loc-item">Washington</option><option value="/provider/state/dc/" class="select-loc-item">Washington, D.C.</option><option value="/provider/state/wv/" class="select-loc-item">West Virginia</option><option value="/provider/state/wi/" class="select-loc-item">Wisconsin</option><option value="/provider/state/wy/" class="select-loc-item">Wyoming</option>            </select>
         <button class="select-btn">
           Search
@@ -311,6 +314,16 @@
                 $(this).parent().find(".nav-sub-list").toggleClass("expand");
               }
             });
+
+
+            $(".icon-nav-btn").click(function () {
+              $(".nav-modal").toggle();
+              $("#hd-menu-input").prop("checked", false);
+              console.log("checked")
+            });
+            $(".nav-cover").click(function () {
+              $(".nav-modal").hide();
+            });
           });
 
   // 加载 footer
@@ -327,7 +340,43 @@
 
 </script>
 
+<script type="module">
+  import { fetchStateCounts } from './js/supabaseApi.js';
 
+  async function renderStateSelect() {
+    const select = document.getElementById('headerNav');
+
+    try {
+      const result = await fetchStateCounts();
+      const data = result.data;
+
+      // 保留第一个默认 option
+      select.innerHTML = `
+            <option value="" class="select-loc-item">Free Phones</option>
+        `;
+
+      data.forEach(item => {
+        const option = document.createElement('option');
+
+        // 州缩写转小写（和你示例 /al/ 一样）
+        const stateCode = item.state
+
+        option.value = `./provider.html?state=${stateCode}`;
+        option.textContent = item.state;
+
+        option.className = 'select-loc-item';
+
+        select.appendChild(option);
+      });
+
+    } catch (err) {
+      console.error(err);
+    }
+  }
+
+  // 调用
+  renderStateSelect();
+</script>
 
 </body>
 </html>
