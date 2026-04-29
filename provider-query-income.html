@@ -249,80 +249,35 @@
     Click Allow to get alerts about free cell phones!    </div>
 </div>
 <script src="./js/jquery-3.0.0.min.js"></script>
-<script>
-  // 加载 header
-  fetch('./header.html')
-          .then(res => res.text())
-          .then(data => {
-            document.getElementById('header').innerHTML = data;
-
-            $(".icon-nav").click(function() {
-              $(".nav-cover").toggleClass('expand');
-              $(".header-nav").toggleClass('expand');
-            })
-            $(".nav-cover").click(function() {
-              $(".nav-cover").toggleClass('expand');
-              $(".header-nav").toggleClass('expand');
-            })
-
-            $(".nav-item.expand .nav-con").on('click', function(e) {
-              if ($(e.target).closest('.icon-go').length) {
-                e.preventDefault();
-                $(this).parent().find(".nav-sub-list").toggleClass("expand");
-              }
-            });
-
-
-            $(".icon-nav-btn").click(function () {
-              $(".nav-modal").toggle();
-              $("#hd-menu-input").prop("checked", false);
-              console.log("checked")
-            });
-            $(".nav-cover").click(function () {
-              $(".nav-modal").hide();
-            });
-          });
-
-  // 加载 footer
-  fetch('./footer.html')
-          .then(res => res.text())
-          .then(data => {
-            document.getElementById('footer').innerHTML = data;
-          });
-
-  document.getElementById("find-btn").href = "./state.html"
-  document.getElementById("btn_qua").href = "./stateq.html"
-  document.getElementById("btn_provider").href = "./state.html"
-  document.getElementById("viewAll").href = "./state.html"
-
-</script>
 <script type="module">
   import { fetchStateCounts } from './js/supabaseApi.js';
 
+  // 渲染州下拉
   async function renderStateSelect() {
-    const select = document.getElementById('headerNav');
+    const selects = document.querySelectorAll('.select-location');
+    if (!selects.length) return;
 
     try {
       const result = await fetchStateCounts();
       const data = result.data;
 
-      // 保留第一个默认 option
-      select.innerHTML = `
-            <option value="" class="select-loc-item">Free Phones</option>
-        `;
+      selects.forEach(select => {
+        // 重置默认项
+        select.innerHTML = `
+                <option value="" class="select-loc-item">Free Phones</option>
+            `;
 
-      data.forEach(item => {
-        const option = document.createElement('option');
+        data.forEach(item => {
+          const option = document.createElement('option');
 
-        // 州缩写转小写（和你示例 /al/ 一样）
-        const stateCode = item.state
+          const stateCode = item.state;
 
-        option.value = `./provider.html?state=${stateCode}`;
-        option.textContent = item.state;
+          option.value = `./provider.html?state=${stateCode}`;
+          option.textContent = item.state;
+          option.className = 'select-loc-item';
 
-        option.className = 'select-loc-item';
-
-        select.appendChild(option);
+          select.appendChild(option);
+        });
       });
 
     } catch (err) {
@@ -330,8 +285,65 @@
     }
   }
 
-  // 调用
-  renderStateSelect();
+  // 初始化 header 事件
+  function initHeaderEvents() {
+    $(".icon-nav").click(function () {
+      $(".nav-cover").toggleClass('expand');
+      $(".header-nav").toggleClass('expand');
+    });
+
+    $(".nav-cover").click(function () {
+      $(".nav-cover").toggleClass('expand');
+      $(".header-nav").toggleClass('expand');
+      $(".nav-modal").hide();
+    });
+
+    $(".nav-item.expand .nav-con").on('click', function (e) {
+      if ($(e.target).closest('.icon-go').length) {
+        e.preventDefault();
+        $(this).parent().find(".nav-sub-list").toggleClass("expand");
+      }
+    });
+
+    $(".icon-nav-btn").click(function () {
+      $(".nav-modal").toggle();
+      $("#hd-menu-input").prop("checked", false);
+    });
+  }
+
+  // 加载 header
+  async function loadHeader() {
+    const res = await fetch('./header.html');
+    const data = await res.text();
+
+    document.getElementById('header').innerHTML = data;
+    renderStateSelect();    // 再渲染 select（关键）
+    initHeaderEvents();     // 先绑定事件
+
+  }
+
+  // 加载 footer
+  async function loadFooter() {
+    const res = await fetch('./footer.html');
+    const data = await res.text();
+
+    document.getElementById('footer').innerHTML = data;
+  }
+
+  // 页面初始化
+  async function init() {
+    await loadHeader();
+    await loadFooter();
+  }
+
+  init();
 </script>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const state = params.get('state');
+  document.getElementById("nextPage").href = `./provider.html?state=${state}`
+</script>
+
 </body>
 </html>
